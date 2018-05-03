@@ -1,0 +1,23 @@
+<div id='page-content'>
+	<!-- <h1>Home</h1>	 -->
+	<div>
+		<img ng-src='img/baner.png' class='banerImage'>
+	  </div>
+	  <div class='thumbContainer'>
+		<div class='thumbCon' ng-repeat='x in config | slice:intNum:endNum'>
+		  <div class='thumbImg'>
+			<div class='thumbIconCon'><img ng-src='{{x.avatar}}' class='thumbIcon'></img></div>
+			<div class='thumbTitle'>{{x.name}}</div>
+			<div class='newImg' ng-if='$index<5'><img ng-src='img/new.png'></img></div>
+			<div class='demoBut'>Demo</div>
+		  </div>
+		  <div class='playNow'>Play Now</div>
+		  <div class='thumb_dec'>{{x.content}}</div>
+		</div>
+	  </div>
+	  <div class='navigateBut'>
+		<span class='nextPreviousBut' ng-class="{'buttonEnable': checkPreviousEnable()}" ng-click='movePrevious()'>Previous</span>
+		<span class='nextPreviousBut' ng-class="{'buttonEnable': checkNextEnable()}" ng-click='moveNext()'>Next</span>
+	  </div>
+	  
+</div>
